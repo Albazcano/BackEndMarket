@@ -1,6 +1,6 @@
 package com.example.marketplace_backend;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+
 
 import javax.persistence.*;
 import java.io.Serializable;

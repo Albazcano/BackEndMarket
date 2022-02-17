@@ -42,7 +42,7 @@ public class ShoeController {
         return "home";
     }
 
-    @PostMapping
+    @PostMapping("/")
     public Shoe createShoe(@RequestBody Shoe shoes){
         return shoeRepository.save(shoes);
     }
