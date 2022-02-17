@@ -8,6 +8,6 @@ import java.util.List;
 @Repository
 public interface ShoeRepository extends JpaRepository<Shoe, Long> {
     List<Shoe> findShoesByBrandEquals(String brand);
-    List<Shoe> findShoesBySizeEquals(String size);
+    List<Shoe> findShoesBySizeEquals(int size);
 
 }

@@ -12,17 +12,57 @@ public class Shoe implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    private String name;
+
+    @Lob
+    private String description;
+
     private String brand;
     private int size;
     private double price;
 
 
-    public Shoe(String brand, int size, double price) {
+
+    @Lob
+    private String imgUrl;
+
+
+    public Shoe(String name, String description, String brand, int size, double price,  String imgUrl) {
+        this.name = name;
+        this.description = description;
         this.brand = brand;
         this.size = size;
         this.price = price;
+        this.imgUrl = imgUrl;
+
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
 
     public Shoe() {
 
@@ -65,8 +105,13 @@ public class Shoe implements Serializable {
     @Override
     public String toString() {
         return "Shoe{" +
-                "brand='" + brand + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", brand='" + brand + '\'' +
                 ", size=" + size +
+                ", price=" + price +
+                ", imgUrl='" + imgUrl + '\'' +
                 '}';
     }
 }
