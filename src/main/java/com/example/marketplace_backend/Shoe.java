@@ -19,7 +19,7 @@ public class Shoe implements Serializable {
     private String description;
 
     private String brand;
-    private int size;
+    private Integer size;
     private double price;
 
 
@@ -28,7 +28,7 @@ public class Shoe implements Serializable {
     private String imgUrl;
 
 
-    public Shoe(String name, String description, String brand, int size, double price,  String imgUrl) {
+    public Shoe(String name, String description, String brand, Integer size, double price,  String imgUrl) {
         this.name = name;
         this.description = description;
         this.brand = brand;
